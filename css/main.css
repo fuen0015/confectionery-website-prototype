@@ -32,17 +32,18 @@ h1 {
   font-family: 'Lobster', cursive;
   color: #f18bb3;
   margin: 0 0 .5rem;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
 }
 
 nav ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
+  background-color: #fff;
 }
 
 nav li {
-  text-align: left;
+  text-align: center;
 }
 
 nav a {
@@ -53,11 +54,12 @@ nav a {
 }
 
 nav a:hover {
-  background-color: #333;
+  background-color: #f18bb3;
   color: #fff;
 }
 
 .banner {
+  overflow: hidden;
   position: relative;
   text-align: left;
   max-height: 800px;
@@ -80,32 +82,35 @@ nav a:hover {
 .flavours {
   margin: 0;
   line-height: 1.2;
-  font-size: 7rem;
+  font-size: 2rem;
   font-weight: bold;
   color: #fff;
 }
 
+img {
+  width: 100%;
+}
+
 p {
-  font-size: 1.5rem;
+  font-size: .5em;
   margin: 0;
-  padding-bottom: 1.5em;
+  padding: 0;
 }
 
 .btn {
   background-color: #fff;
   color: #000;
-  padding: .4em .75em .3em;
   display: inline-block;
   border-radius: 8px;
   text-decoration: none;
   border-style: solid;
   border-width: 12px;
   border-color: #fff;
-  font-size: 1.125rem;
 }
 
 .btn-big {
-  font-size: 1.5rem;
+  font-size: .75rem;
+  text-align: center;
 }
 
 .btn:hover {
@@ -114,14 +119,22 @@ p {
   border-color: #000;
 }
 
+.column h2 {
+  color: #fff;
+}
+
 .img-flex {
   width: 100%;
   display: block;
 }
 
 .row {
-  padding-top: 16em;
+  padding-top: 1em;
   display: flex;
+}
+
+.flavours {
+  text-align: left;
 }
 
 .instagram-row {
@@ -129,28 +142,133 @@ p {
 }
 
 .column {
-  flex: 33.33%
-  padding 5px;
+  position: relative;
+}
+
+.row h2 {
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  transform: translate(-50%, -50%);
 }
 
 .row-img {
   width: 100%;
 }
 
+.nav-card {
+  opacity: 0.5;
+}
+
+.card {
+  list-style-type: none;
+  max-width: 70%;
+  padding-left: .5em;
+}
+
+.location-card {
+  padding: .75em 0;
+  display: flex;
+  background-color: #fff;
+}
+
 .card-img {
   display: inline-block;
 }
+
 .card-body {
   display: inline-block;
-  padding-left: 1.5em;
+  padding-left: .5em;
+  font-size: .5em;
+}
+
+.instagram {
+  font-size: .75em;
+  text-align: center;
+  color: #fff;
+}
+
+footer {
+  background-color: #fff;
+  padding: .25em;
+  text-align: center;
 }
 
 
 @media only screen and (min-width: 25em) {
 
-  nav li {
-    display: inline-block;
-    text-align: center;
+  html {
+    font-size: 100%;
+    line-height: 1.3;
   }
 
-}
+
+  @media only screen and (min-width: 38em) {
+
+    html {
+      font-size: 110%;
+      line-height: 1.4;
+    }
+
+    nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    nav ul li {
+      max-width: 20%;
+    }
+
+    h1,
+    p {
+      margin: 0 0 1.4rem;
+    }
+
+    h2 {
+      font-size: 2em;
+    }
+
+    .flavours {
+      font-size: 3em;
+    }
+
+  }
+
+  @media only screen and (min-width: 60em) {
+
+    html {
+      font-size: 120%;
+      line-height: 1.5;
+    }
+
+    h1,
+    p {
+      margin: 0 0 1.5rem;
+    }
+
+    .flavours {
+      font-size: 4em;
+    }
+
+    .btn-big {
+      font-size: 2em;
+    }
+
+    p {
+      font-size: 3em;
+    }
+
+    h2 {
+      font-size: 4em;
+    }
+
+    footer p {
+      font-size: .75em;
+    }
+
+    .instagram {
+      font-size: 2em;
+    }
+
+  }
